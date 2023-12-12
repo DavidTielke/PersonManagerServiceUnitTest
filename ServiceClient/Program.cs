@@ -1,4 +1,5 @@
 
+using System.Runtime.CompilerServices;
 using ServiceClient.Data;
 using ServiceClient.Logic;
 
@@ -39,7 +40,7 @@ namespace ServiceClient
         private static void AddApplicationServices(IServiceCollection services)
         {
             services.AddTransient<IPersonManager, PersonManager>();
-            services.AddTransient<IPersonRepository, PersonTestRepository>();
+            services.AddTransient<IPersonRepository, PersonRepository>();
             services.AddTransient<IPersonParser, PersonParser>();
             services.AddTransient<IFileLoader, FileLoader>();
         }
