@@ -1,4 +1,5 @@
-﻿using ServiceClient.Data;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ServiceClient.Data;
 using ServiceClient.Models;
 
 namespace UnitTests.ServiceClient.Logic.PersonManagerTest;
@@ -15,5 +16,10 @@ class RepoMock : IPersonRepository
     public IQueryable<Person> Query()
     {
         return Items.AsQueryable();
+    }
+
+    public void Insert(Person person)
+    {
+        
     }
 }

@@ -12,6 +12,11 @@ namespace ServiceClient.Logic
             _repository = repository;
         }
 
+        public void Add(Person person)
+        {
+            //_repository.Insert(person);
+        }
+
         public IQueryable<Person> GetAll()
         {
             var persons = _repository.Query();

@@ -21,5 +21,10 @@ namespace ServiceClient.Data
             var persons = _parser.ParseCsvLines(lines);
             return persons.AsQueryable();
         }
+
+        public void Insert(Person person)
+        {
+            
+        }
     }
 }

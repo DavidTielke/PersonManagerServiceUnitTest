@@ -3,6 +3,8 @@ using System.Runtime.CompilerServices;
 using ServiceClient.Data;
 using ServiceClient.Logic;
 
+[assembly:InternalsVisibleTo("UnitTests")]
+
 namespace ServiceClient
 {
     public class Program

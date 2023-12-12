@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Moq;
 using ServiceClient.Data;
 using ServiceClient.Logic;
+using ServiceClient.Models;
 
 namespace UnitTests.ServiceClient.Logic.PersonManagerTest
 {
@@ -27,6 +28,14 @@ namespace UnitTests.ServiceClient.Logic.PersonManagerTest
         {
             _sut = null;
             _repoMock = null;
+        }
+
+        [Test]
+        public void Add_OnePersonIsAdded_RepoInsertIsCalled()
+        {
+            _sut.Add(new Person(1,"Test",23));
+
+            _repoMock.Verify(m => m.Insert(It.IsAny<Person>()), Times.Exactly(1));
         }
     }
 }

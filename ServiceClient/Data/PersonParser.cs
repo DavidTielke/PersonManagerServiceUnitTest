@@ -20,4 +20,9 @@ public class PersonParser : IPersonParser
             });
         return persons;
     }
+
+    private string Foo()
+    {
+        return "Test";
+    }
 }

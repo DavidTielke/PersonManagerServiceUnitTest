@@ -13,5 +13,10 @@ namespace ServiceClient.Data
                 new Person(3, "TestChild", 17),
             }.AsQueryable();
         }
+
+        public void Insert(Person person)
+        {
+            
+        }
     }
 }
