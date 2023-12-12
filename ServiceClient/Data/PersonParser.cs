@@ -6,6 +6,11 @@ public class PersonParser : IPersonParser
 {
     public IEnumerable<Person> ParseCsvLines(IEnumerable<string> lines)
     {
+        if (lines == null)
+        {
+            throw new ArgumentNullException(nameof(lines));
+        }
+
         var persons = lines.Select(l => l.Split(","))
             .Select(p => new Person
             {
